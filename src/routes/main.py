@@ -24,4 +24,16 @@ def index():
 
     return render_template('index.html')
 
+# contact
+@main.route('/contact')
+@main.route('/contact.html')
+def contact():
 
+    return render_template('contact.html')
+
+# about
+@main.route('/about')
+@main.route('/about.html')
+def about():
+
+    return render_template('about.html')

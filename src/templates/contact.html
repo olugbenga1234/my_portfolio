@@ -1,77 +1,91 @@
 {% from "base.html" import render_css, render_js, render_first %}
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="zxx">
 
 
 <head>
     {{ render_css(render) }}
-    
 </head>
 
 <body>
-   
     {{ render_first(render) }}
 
-    <!-- Home Section -->
-    <main class="home-section">
-        <div class="backgroundShape-right"></div>
-        <div class="home-container d-flex align-items-center justify-content-center">
-            <!-- Particles Animation -->
-            <div id="particles-js"></div>
-            <!-- Particles Animation End -->
-            <!-- Author Name, My Name, Home Page Title -->
-            <div class="home-title">
-                <h3>Hello World! I’m</h3>
-                <h1 class="theme-color">Olugbenga Akeredolu</h1>
-                <h4>Web Designer & Developer</h4>
-                <div class="template-btn">
-                    <a href="contact.html" class="pointer-href">Hire me</a>
-                    <a href="#" class="pointer-href">Download CV</a>
-                </div>
-            </div> <!-- Author Name, My Name, Home Page Title End -->
-            <!-- Dribbble Slider -->
-            <div class="dribbble-btn pointer-href">
-                <button data-toggle="tooltip" data-placement="left" title="Recent Dribbbles"><i class="fas fa-basketball-ball"></i></button>
-            </div>
-            <div class="dribbble-slider">
-                <div class="dribbble-close-btn pointer-href">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="dribbble-slider-active owl-carousel">
-                    <div class="slider-box d-flex align-items-center">
-                        <div class="slider-text">
-                            <h4 class="h4 theme-color">Web Design</h4>
-                            <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit</p>
-                            <a href="#" class="read-more-btn pointer-href">Go to dribbble</a>
-                        </div>
-                        <div class="slider-image">
-                            <img src="img/slider/1.jpg" alt="slide image">
-                        </div>
+    <!-- Single Page -->
+    <main class="single-page">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h2>.<span>contact</span></h2>
+            <p class="contact-title-intro">Start your Journey Right Now! Please don’t hesitate to contact with me for your project.</p>                
+        </div> <!-- Page Header End -->
+        <div class="separator"></div>
+        <div class="contact-header-bg">                
+            <!-- Contact Information -->
+            <div class="contact-info d-flex justify-content-between">
+                <div class="contact-info-box">
+                    <div class="icon-box">
+                        <span><i class="fas fa-phone-alt"></i></span>
                     </div>
-                    <div class="slider-box d-flex align-items-center">
-                        <div class="slider-text">
-                            <h4 class="h4 theme-color">Web Develop</h4>
-                            <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit</p>
-                            <a href="#" class="read-more-btn pointer-href">Go to dribbble</a>
-                        </div>
-                        <div class="slider-image">
-                            <img src="img/slider/2.jpg" alt="slide image">
-                        </div>
-                    </div>
-                    <div class="slider-box d-flex align-items-center">
-                        <div class="slider-text">
-                            <h4 class="h4 theme-color">Branding</h4>
-                            <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit</p>
-                            <a href="#" class="read-more-btn pointer-href">Go to dribbble</a>
-                        </div>
-                        <div class="slider-image">
-                            <img src="img/slider/3.jpg" alt="slide image">
-                        </div>
+                    <div class="text-box">
+                        <a href="#" class="pointer-small">+880 1234 56789</a>
+                        <a href="#" class="pointer-small">+880 1234 56789</a>
                     </div>
                 </div>
-            </div> <!-- Dribbble Slider End -->
+                <div class="contact-info-box">
+                    <div class="icon-box">
+                        <span><i class="fas fa-paper-plane"></i></span>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="pointer-small">info@domain.com</a>
+                        <a href="#" class="pointer-small">name@website.com</a>
+                    </div>
+                </div>
+                <div class="contact-info-box">
+                    <div class="icon-box">
+                        <span><i class="fas fa-home"></i></span>
+                    </div>
+                    <div class="text-box">
+                        <p>4237 Benson Park Drive <br>Young America</p>
+                    </div>
+                </div>
+            </div> <!-- Contact Information End -->
         </div>
-    </main> <!-- Home Section end -->
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">                      
+                <!-- Contact Form -->
+                <div class="contact_form">
+                    <form class="contact__form" method="post" action="https://themeforest.weexen.com/fariha/color-1/mail.php">
+                        <!-- Form Message -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success contact__msg" style="display: none"
+                                    role="alert">
+                                    Your message was sent successfully.
+                                </div>
+                            </div>
+                        </div> <!-- Form Message End -->
+                        <!-- Form Element -->
+                        <div class="form_input_box">
+                            <input class="pointer-input" name="name" type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="form_input_box">
+                            <input class="pointer-input" name="email" type="email" placeholder="Your email" required>
+                        </div>
+                        <div class="form_input_box">
+                            <input class="pointer-input" name="subject" type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form_input_box">
+                            <textarea class="pointer-input" name="message" rows="3" placeholder="Your message" required></textarea>
+                        </div>
+                        <button class="form-submit-btn pointer-href" name="submit" type="submit">Send Message</button>
+                        <!-- Form Element End -->
+                    </form>
+                </div> <!-- Contact Form End -->
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div id="map"></div>
+            </div>
+        </div>
+    </main> <!-- Single page end -->
 
     <!-- ======================================= -->
                     <!-- MAIN MENU -->
@@ -93,7 +107,7 @@
             <!-- Menu Box -->
             <li class="nav-box mouseover-image-change active">
                 <a href="index.html" class="pointer-large nav-link">
-                    <span class="nav-btn active" data-text="home">.home</span>
+                    <span class="nav-btn" data-text="home">.home</span>
                 </a>
                 <div class="mouseover-image" style="background-image: url(img/nav-hover/home.png);"></div>
             </li><!-- Menu Box End -->
@@ -159,7 +173,7 @@
             <!-- Menu Box -->
             <li class="nav-box mouseover-image-change">
                 <a href="contact.html" class="pointer-large nav-link">
-                    <span class="nav-btn" data-text="contact">.contact</span>
+                    <span class="nav-btn active" data-text="contact">.contact</span>
                 </a>
                 <div class="mouseover-image" style="background-image: url(img/nav-hover/contact.png);"></div>
             </li><!-- Menu Box End -->
@@ -169,4 +183,6 @@
 
     {{ render_js(render) }}
 </body>
+
+
 </html>

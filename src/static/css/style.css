@@ -1361,6 +1361,7 @@ body.out .menu-container.active .submenu-close.active {
     margin-bottom: 30px;
     background: rgba(255,255,255,.05);
     overflow: hidden;
+    height: 100%;
 }
 .single-service:before {
     position: absolute;

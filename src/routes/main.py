@@ -16,6 +16,9 @@ app = Flask(__name__)
 
 main = Blueprint('main', __name__)
 
+mine = 'olugbengaakeredolu1234@gmail.com'
+
+
 
 # home
 @main.route('/')
@@ -24,14 +27,62 @@ def index():
 
     return render_template('index.html')
 
-# contact
-@main.route('/contact')
-@main.route('/contact.html')
-def contact():
 
-    return render_template('contact.html')
+
+# contact
+@main.route('/contact', methods=['GET', 'POST'])
+@main.route('/contact.html', methods=['GET', 'POST'])
+def contact():
+    my_number = '+123456789'
+    my_email = 'olugbengaakeredolu1234@gmail.com'
+
+    if request.method == 'POST':
+        message = request.form.get('message')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        name = request.form.get('name')
+        subject = request.form.get('subject')
+
+        # email message
+        msg = EmailMessage()
+        msg['Subject'] = subject
+        msg['From'] = mine
+        msg['To'] = mine
+        msg.set_content('')
+        msg.add_alternative("""\
+            <h1 style="color: #000; font-weight: 100; text-align: center;">
+            <br>
+            
+            Message from {}
+            </h1>
+            subject: {}
+            <br>
+            message: {}
+            <br>
+            name: {}
+            <br>
+            phone: {}
+            <br>
+        
+        """.format(email, subject, message, name, phone), subtype='html')
+
+        # email sending function
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login("donateaseedoffcial@gmail.com", "donateaseed1234")
+            smtp.send_message(msg)
+
+        flash('Message sent', 'success')
+
+        return redirect(url_for('main.contact'))
+
+   #else:
+        #flash('Error Ocurred', 'error')
+
+    return render_template('contact.html', my_email=my_email, my_number=my_number)
 
 # about
+
+
 @main.route('/about')
 @main.route('/about.html')
 def about():

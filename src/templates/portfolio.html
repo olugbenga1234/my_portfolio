@@ -1,0 +1,491 @@
+{% from "base.html" import render_css, render_js, render_first, render_menu %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    {{ render_css(render) }}
+  </head>
+
+  <body>
+    {{ render_first(render) }}
+
+    <!-- Single Page -->
+    <main class="single-page">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h2>.<span>portfolio</span></h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut magna
+          neque, pulvinar in orci in, pellentesque consequat tellus. Fusce
+          mauris massa, pellentesque nec augue at, hendrerit rutrum ex. Cras
+          venenatis vulputate nisi ut elementum.
+        </p>
+      </div>
+      <!-- Page Header End -->
+      <div class="separator"></div>
+      <div class="portfolio-wrapper">
+        <div class="row">
+          <div class="col-xl-12">
+            <!-- Filter Buttons -->
+            <div class="button-group portfolio-btn text-right mb-40">
+              <button
+                data-toggle="tooltip"
+                data-placement="top"
+                title="16 Items"
+                class="active pointer-href"
+                data-filter="*"
+              >
+                All
+              </button>
+              <button
+                data-toggle="tooltip"
+                data-placement="top"
+                title="7 Items"
+                class="pointer-href"
+                data-filter=".cat1"
+              >
+                Graphic
+              </button>
+              <button
+                data-toggle="tooltip"
+                data-placement="top"
+                title="5 Items"
+                class="pointer-href"
+                data-filter=".cat2"
+              >
+                Branding
+              </button>
+              <button
+                data-toggle="tooltip"
+                data-placement="top"
+                title="3 Items"
+                class="pointer-href"
+                data-filter=".cat3"
+              >
+                Web Design
+              </button>
+              <button
+                data-toggle="tooltip"
+                data-placement="top"
+                title="4 Items"
+                class="pointer-href"
+                data-filter=".cat4"
+              >
+                Web Developing
+              </button>
+            </div>
+            <!-- Filter Buttons End -->
+          </div>
+        </div>
+        <!-- Portfolio Grid -->
+        <div class="row grid no-gutters">
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat3">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/1.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/1.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat2 cat4">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/2.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/2.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat3">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/3.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/3.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat2 cat4">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/4.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/4.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat4">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/5.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/5.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat2 cat3">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/6.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/6.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat2 cat3"
+          >
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/7.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/7.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat2 cat3"
+          >
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/8.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/8.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat2 cat3"
+          >
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/9.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a href="img/portfolio/9.png" class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat4 cat3"
+          >
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/10.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a
+                  href="img/portfolio/10.png"
+                  class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat2 cat3">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/11.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a
+                  href="img/portfolio/11.png"
+                  class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat2">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/12.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a
+                  href="img/portfolio/12.png"
+                  class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat4 cat2 cat3"
+          >
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/13.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a
+                  href="img/portfolio/13.png"
+                  class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat4 cat3">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/14.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a
+                  href="img/portfolio/14.png"
+                  class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat1 cat3">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/15.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a
+                  href="img/portfolio/15.png"
+                  class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item cat2 cat1">
+            <div class="portfolio-image-block">
+              <img src="img/portfolio/16.png" alt="portfolio image" />
+              <div class="portfolio-image-info">
+                <a
+                  href="img/portfolio/16.png"
+                  class="gallery_popup pointer-open"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <h4 class="body-font">Branding</h4>
+              </div>
+              <div class="image-hover-btn">
+                <div class="full-view-btn">
+                  <a href="portfolio-details.html" class="pointer-href"
+                    >Full view</a
+                  >
+                </div>
+                <div class="load-more-btn">
+                  <a href="portfolio-archives.html" class="pointer-href"
+                    >Load more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Grid End -->
+      </div>
+    </main>
+    <!-- Single page end -->
+
+    <!-- ======================================= -->
+    <!-- MAIN MENU -->
+    <!-- ======================================= -->
+
+    {{ render_menu(render) }}
+
+    <button id="back_to_top" class="btnEntrance pointer-href">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    {{ render_js(render) }}
+  </body>
+</html>

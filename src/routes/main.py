@@ -19,14 +19,12 @@ main = Blueprint('main', __name__)
 mine = 'olugbengaakeredolu1234@gmail.com'
 
 
-
 # home
 @main.route('/')
 @main.route('/index.html')
 def index():
 
     return render_template('index.html')
-
 
 
 # contact
@@ -75,16 +73,24 @@ def contact():
 
         return redirect(url_for('main.contact'))
 
-   #else:
+   # else:
         #flash('Error Ocurred', 'error')
 
     return render_template('contact.html', my_email=my_email, my_number=my_number)
 
+
+
 # about
-
-
 @main.route('/about')
 @main.route('/about.html')
 def about():
 
     return render_template('about.html')
+
+
+# portfolio
+@main.route('/portfolio')
+@main.route('/portfolio.html')
+def portfolio():
+
+    return render_template('portfolio.html')

@@ -31,7 +31,7 @@ def index():
 @main.route('/contact', methods=['GET', 'POST'])
 @main.route('/contact.html', methods=['GET', 'POST'])
 def contact():
-    my_number = '+123456789'
+    my_number = '+123456789678'
     my_email = 'olugbengaakeredolu1234@gmail.com'
 
     if request.method == 'POST':

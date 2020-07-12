@@ -388,6 +388,10 @@
     .contact-info-box:last-child {
         margin-bottom: 0;
     }
+    .contact-info-box {
+
+        display: grid;
+    }
     .icon-box {
         float: left;
         margin-right: 25px;

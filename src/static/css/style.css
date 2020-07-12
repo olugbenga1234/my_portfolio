@@ -446,7 +446,7 @@ button.form-submit-btn {
 }
 
 button.form-submit-btn {
-    width: 95%;
+    width: 100%;
 }
 
 button.submit:hover,
@@ -2806,7 +2806,7 @@ p.client-name span {
 
 .form_input_box input,
 .form_input_box select {
-    width: 95%;
+    width: 100%;
 }
 
 .text-leave textarea,
@@ -2821,7 +2821,7 @@ p.client-name span {
 }
 
 .form_input_box textarea {
-    width: 95%;
+    width: 100%;
 }
 
 .form_input_box textarea {

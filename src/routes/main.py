@@ -17,6 +17,21 @@ main = Blueprint('main', __name__)
 
 mine = 'olugbengaakeredolu1234@gmail.com'
 
+#Function for upload picture#
+def save_picture(form_picture):
+    random_hex = secrets.token_hex(8)
+    _, f_ext = os.path.splitext(form_picture.filename)
+    picture_fn = random_hex + f_ext
+    picture_path = os.path.join(
+        app.root_path, '../static/img/pics', picture_fn)
+
+    output_size = (125, 125)
+    i = Image.open(form_picture)
+    i.thumbnail(output_size)
+
+    i.save(picture_path)
+
+    return picture_fn
 
 # home
 @main.route('/')
@@ -79,10 +94,11 @@ def contact():
 
 
 # about
-@main.route('/about')
-@main.route('/about.html')
+@main.route('/about', methods=['GET', 'POST'])
+@main.route('/about.html', methods=['GET', 'POST'])
 def about():
     reviews = Review.query.all()
+    
 
     return render_template('about.html', reviews=reviews)
 
@@ -113,6 +129,7 @@ def addreview():
         platform = request.form.get('platform')
         reference = request.form.get('ref')
         company = request.form.get('company')
+       
 
         add_review = Review(
             name=name,
@@ -120,10 +137,11 @@ def addreview():
             platform=platform,
             reference=reference,
             company=company
+            
         )
 
         db.session.add(add_review)
         db.session.commit()
 
-        flash('Success', 'success')
+        flash('Success! Feedback will be uploaded once Reviewed', 'success')
         return redirect(url_for('main.about'))

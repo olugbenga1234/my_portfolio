@@ -268,6 +268,9 @@
     .single-page {
         margin-left: 200px;
     }
+    .form_input_box select {
+        width: 100%;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -327,10 +330,17 @@
     .find-archives {
         font-size: 14px;
     }
+    .form_input_box select {
+        width: 100%;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media only screen and (max-width: 992px) {}
+@media only screen and (max-width: 992px) {
+    .form_input_box select {
+        width: 100%;
+    }
+}
 
 /* Medium devices (tablets, less than 992px) */
 @media only screen and (max-width: 991px) {
@@ -413,6 +423,9 @@
     .post-search,
     #map {
         margin-top: 50px;
+    }
+    .form_input_box select {
+        width: 100%;
     }
 }
 
@@ -600,9 +613,12 @@
     .contact-info {
         width: 70%;
     }
+    .form_input_box select {
+        width: 100%;
+    }
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
+/* Extra small devices (portrait phones, less than 520px) */
 @media only screen and (max-width: 520px) {
     .dribbble-slider {
         width: 250px;
@@ -690,6 +706,9 @@
     .blog-body h3 {
         font-size: 24px;
     }
+    .form_input_box select {
+        width: 100%;
+    }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -719,6 +738,9 @@
     .home-container,
     .single-page {
         padding: 20px;
+    }
+    .form_input_box select {
+        width: 100%;
     }
 }
 
@@ -778,6 +800,9 @@
     .skill-bar-percent {
         font-size: 14px;
     }
+    .form_input_box select {
+        width: 100%;
+    }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -831,5 +856,8 @@
     .post-content h5,
     .form_input_box {
         font-size: 14px;
+    }
+    .form_input_box select {
+        width: 100%;
     }
 }

@@ -355,12 +355,12 @@
                   %} {% if messages %} {% for category, message in messages %}
                         {% if category == 'success' %}
                         <div class="alert alert-success" role="alert">
-                            {{ message }}!
+                            {{ message }} <i class="far fa-smile"></i>!
                         </div>
                         {% endif %} {% endfor %} {% endif %} {% if messages %} {% for
                   category, message in messages %} {% if category == 'error' %}
                         <div class="alert alert-danger" role="alert">
-                            Error: {{ message }}!
+                            Error: {{ message }} <i class="far fa-frown"></i>!
                         </div>
                         {% endif %} {% endfor %} {% endif %} {% endwith %}
                     </div>
@@ -370,7 +370,7 @@
                     {% for review in reviews %}
                     <div class="single-testimonials">
                         <div class="client-image">
-                            <img src="img/clients/client-1.jpg" alt="clients">
+                            <img src="../static/img/pics/default.png" alt="clients">
                         </div>
                         <div class="feedback-text">
                             <p class="client-feedback">{{review.review}}</p>
@@ -402,8 +402,10 @@
                                 <div class="modal-body">
 
                                     <!-- Form Element -->
+                                   
+                                    
                                     <div class="form_input_box">
-                                        <input class="pointer-input" name="name" type="text" placeholder="Your name"
+                                        <input class="pointer-input" name="name" type="text" placeholder="Your name" minlength="2"
                                             required />
                                     </div>
 
@@ -411,7 +413,7 @@
                                     <div class="form_input_box">
                                         <select class="form-control pointer-input custom-select" name="platform"
                                             id="platform" placeholder="Reference" required>
-                                            <option disabled value="select">Platform</option>
+                                            <option disabled>Platform</option>
                                             <option>Fiverr</option>
                                             <option>Linked In</option>
                                             <option>Other</option>
@@ -420,11 +422,8 @@
                                     </div>
 
 
-
-
-
                                     <div class="form_input_box">
-                                        <input class="pointer-input" name="ref" type="text" placeholder="Reference"
+                                        <input class="pointer-input" name="ref" type="text" placeholder="Reference No."
                                             required />
                                     </div>
 
@@ -457,7 +456,62 @@
 
     </main> <!-- Single page end -->
 
-    {{ render_menu(render) }}
+    <!-- ======================================= -->
+<!-- MAIN MENU -->
+<!-- ======================================= -->
+<!-- Menu Container -->
+<nav class="menu-container overlay-bg">
+    <!-- Menu Close -->
+    <div class="menu-close pointer-large"></div>
+  
+    <!-- Sub Menu Close -->
+    <div class="submenu-close-box">
+      <div class="submenu-close pointer-large">
+        <button type="button"><i class="fas fa-arrow-left"></i>BACK</button>
+      </div>
+    </div>
+    <!-- Sub Menu Close End -->
+  
+    <!-- Main Menu -->
+    <ul class="main-menu overlay-bg">
+      <!-- Menu Box -->
+      <li class="nav-box mouseover-image-change ">
+        <a href="index.html" class="pointer-large nav-link">
+          <span class="nav-btn " data-text="home">.Home</span>
+        </a>
+  
+      </li>
+      <!-- Menu Box End -->
+      <!-- Menu Box -->
+      <li class="nav-box mouseover-image-change active">
+        <a href="about.html" class="pointer-large nav-link">
+          <span class="nav-btn active" data-text="about">.About me</span>
+        </a>
+    
+      </li>
+      <!-- Menu Box End -->
+    
+  
+      <li class="nav-box mouseover-image-change">
+        <a href="#" class="pointer-large nav-link">
+          <span class="nav-btn" data-text="resume">.My portfolio</span>
+        </a>
+      
+      </li>
+  
+      <!-- Menu Box -->
+      <li class="nav-box mouseover-image-change">
+        <a href="contact.html" class="pointer-large nav-link">
+          <span class="nav-btn" data-text="contact">.Contact me</span>
+        </a>
+        
+      </li>
+      <!-- Menu Box End -->
+    </ul>
+    <!-- Main Menu End -->
+  </nav>
+  <!-- Menu Container End -->
+  
 
     <button id="back_to_top" class="btnEntrance pointer-href"><i class="fas fa-arrow-up"></i></button>
 

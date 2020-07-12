@@ -1,9 +1,8 @@
-from flask import Blueprint, render_template, request, jsonify, json, redirect, flash, url_for, Markup
-from flask_login import login_required, current_user
-from src.routes.auth import UpdateAccountForm
+from flask import Blueprint, render_template, request, send_file, jsonify, json, redirect, flash, url_for, Markup
+#from flask_login import login_required, current_user
+#from src.routes.auth import UpdateAccountForm
 from src.extensions import db
-from src.models import Donated, User
-from src.models import User
+from src.models import Review
 import secrets
 import smtplib
 import os
@@ -79,13 +78,13 @@ def contact():
     return render_template('contact.html', my_email=my_email, my_number=my_number)
 
 
-
 # about
 @main.route('/about')
 @main.route('/about.html')
 def about():
+    reviews = Review.query.all()
 
-    return render_template('about.html')
+    return render_template('about.html', reviews=reviews)
 
 
 # portfolio
@@ -94,3 +93,37 @@ def about():
 def portfolio():
 
     return render_template('portfolio.html')
+
+
+# download cv
+@main.route('/download')
+def download_file():
+    # file_fn
+    path = os.path.join(
+        app.root_path, '../upload/my_cv.pdf')
+    return send_file(path, as_attachment=True)
+
+
+# add review
+@main.route('/addreview', methods=['GET', 'POST'])
+def addreview():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        review = request.form.get('review')
+        platform = request.form.get('platform')
+        reference = request.form.get('ref')
+        company = request.form.get('company')
+
+        add_review = Review(
+            name=name,
+            review=review,
+            platform=platform,
+            reference=reference,
+            company=company
+        )
+
+        db.session.add(add_review)
+        db.session.commit()
+
+        flash('Success', 'success')
+        return redirect(url_for('main.about'))

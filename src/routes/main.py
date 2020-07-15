@@ -116,7 +116,7 @@ def portfolio():
 def download_file():
     # file_fn
     path = os.path.join(
-        app.root_path, '../upload/my_cv.pdf')
+        app.root_path, '../upload/my_cv.docx')
     return send_file(path, as_attachment=True)
 
 

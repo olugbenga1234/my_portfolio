@@ -5,6 +5,8 @@ from datetime import date, datetime
 import json
 
 # User Account Model
+
+
 class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     #username = db.Column(db.String(100), unique=True)
@@ -15,10 +17,9 @@ class Review(db.Model):
     #email = db.Column(db.String(200), unique=True)
     #phone = db.Column(db.String(100), nullable=True)
     platform = db.Column(db.String)
+    approved = db.Column(db.String, default='no', nullable=False)
     company = db.Column(db.String(300), nullable=True)
-    image_file = db.Column(db.String(200), nullable=False, default='default.png')
-    date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-
-
-
-        
+    image_file = db.Column(
+        db.String(200), nullable=False, default='default.png')
+    date_created = db.Column(
+        db.DateTime, nullable=False, default=datetime.utcnow)

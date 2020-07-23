@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, send_file, jsonify, json,
 #from flask_login import login_required, current_user
 #from src.routes.auth import UpdateAccountForm
 from src.extensions import db
+from flask_admin import Admin
 from src.models import Review
 import secrets
 import smtplib
@@ -9,6 +10,7 @@ import os
 from flask import Flask
 from PIL import Image
 from flask_mail import Mail
+from flask_admin.contrib.sqla import ModelView
 from email.message import EmailMessage
 
 app = Flask(__name__)
@@ -16,6 +18,7 @@ app = Flask(__name__)
 main = Blueprint('main', __name__)
 
 mine = 'olugbengaakeredolu1234@gmail.com'
+
 
 #Function for upload picture#
 def save_picture(form_picture):
@@ -98,6 +101,7 @@ def contact():
 @main.route('/about.html', methods=['GET', 'POST'])
 def about():
     reviews = Review.query.all()
+    #status = Review.query.filter(Review.status == 'yes')
     
 
     return render_template('about.html', reviews=reviews)
@@ -145,3 +149,5 @@ def addreview():
 
         flash('Success! Feedback will be uploaded once Reviewed', 'success')
         return redirect(url_for('main.about'))
+
+

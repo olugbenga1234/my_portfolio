@@ -368,6 +368,7 @@
                 <!-- Form Message End -->
                 <div class="clients-testimonial-active owl-carousel">
                     {% for review in reviews %}
+                    {% if review.approved == 'yes' %}
                     <div class="single-testimonials">
                         <div class="client-image">
                             <img src="../static/img/pics/default.png" alt="clients">
@@ -377,13 +378,16 @@
                             <p class="client-name">{{review.name}}, <span>{{review.company}}</span></p>
                         </div>
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
             <!-- Clients Testimonial End -->
 
+            <a href="#review">fff</a>
+
             <!--add review-->
-            <div class="container text-center">
+            <div class="container text-center" id="review">
                 <button type="button" class="btn p-3 btn-primary btn-sm" data-toggle="modal"
                     data-target="#exampleModal">
                     <i class="fas fa-pen-alt"></i> Add Review

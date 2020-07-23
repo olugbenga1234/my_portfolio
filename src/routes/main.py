@@ -147,7 +147,7 @@ def addreview():
         db.session.add(add_review)
         db.session.commit()
 
-        flash('Success! Feedback will be uploaded once Reviewed', 'success')
+        flash('Thank you! Feedback will be displayed once reviewed.', 'success')
         return redirect(url_for('main.about'))
 
 

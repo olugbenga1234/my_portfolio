@@ -12,6 +12,7 @@ from PIL import Image
 from flask_mail import Mail
 from flask_admin.contrib.sqla import ModelView
 from email.message import EmailMessage
+from flask_login import UserMixin
 
 app = Flask(__name__)
 
@@ -49,6 +50,7 @@ def index():
 @main.route('/contact.html', methods=['GET', 'POST'])
 def contact():
     my_number = '+4917687834465'
+
     my_email = 'olugbengaakeredolu1234@gmail.com'
 
     if request.method == 'POST':
@@ -145,6 +147,32 @@ def addreview():
 
         db.session.add(add_review)
         db.session.commit()
+
+        subject = 'Important | Review Added'
+
+        # email message
+        msg = EmailMessage()
+        msg['Subject'] = subject
+        msg['From'] = mine
+        msg['To'] = mine
+        msg.set_content('')
+        msg.add_alternative("""\
+            <h3 style="color: #000; font-weight: 100; text-align: center;">
+            <br>
+            
+            A Review by {} has been added <br>
+            Check as soon as possible.
+            <br>
+            Company name: {}
+           
+            <br>
+        
+        """.format(name,company), subtype='html')
+
+        # email sending function
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login("donateaseedoffcial@gmail.com", "donateaseed1234")
+            smtp.send_message(msg)
 
         flash('Thank you! Feedback will be displayed once reviewed.', 'success')
         return redirect(url_for('main.about'))

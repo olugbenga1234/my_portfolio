@@ -3115,3 +3115,13 @@ button:hover.post-search-box {
 .form-control{
     display: inline;
 }
+
+#loginview{
+    place-items: center;
+    margin-top: 20%;
+    display: grid;
+}
+
+#login, #loginview, .login{
+    cursor: auto !important;
+}

@@ -101,9 +101,8 @@ def contact():
 @main.route('/about.html', methods=['GET', 'POST'])
 def about():
     reviews = Review.query.all()
-    #status = Review.query.filter(Review.status == 'yes')
+    # amount = db.session.query(Review).filter_by()
     
-
     return render_template('about.html', reviews=reviews)
 
 

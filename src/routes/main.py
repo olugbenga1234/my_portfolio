@@ -85,7 +85,7 @@ def contact():
 
         # email sending function
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login("donateaseedoffcial@gmail.com", "donateaseed1234")
+            smtp.login("officialolugbengaakeredolu@gmail.com", "justarandomguycr7")
             smtp.send_message(msg)
 
         flash('Message sent', 'success')
@@ -171,7 +171,7 @@ def addreview():
 
         # email sending function
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login("donateaseedoffcial@gmail.com", "donateaseed1234")
+            smtp.login("officialolugbengaakeredolu@gmail.com", "justarandomguycr7")
             smtp.send_message(msg)
 
         flash('Thank you! Feedback will be displayed once reviewed.', 'success')

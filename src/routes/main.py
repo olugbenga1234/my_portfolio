@@ -49,7 +49,9 @@ def index():
 @main.route('/contact', methods=['GET', 'POST'])
 @main.route('/contact.html', methods=['GET', 'POST'])
 def contact():
-    my_number = '+4917687834465'
+    my_number = '+44 7466 632582'
+
+    watsapp = '+49 176 87834465'
 
     my_email = 'olugbengaakeredolu1234@gmail.com'
 
@@ -95,7 +97,7 @@ def contact():
    # else:
         #flash('Error Ocurred', 'error')
 
-    return render_template('contact.html', my_email=my_email, my_number=my_number)
+    return render_template('contact.html', my_email=my_email, my_number=my_number, watsapp=watsapp)
 
 
 # about

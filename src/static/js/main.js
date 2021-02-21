@@ -327,7 +327,7 @@ function basicmap() {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(32.941236, -97.134178),
         map: map,
-        title: 'Fariha'
+        title: 'Olugbenga'
     });
 }
 if ($('#map').length != 0) {

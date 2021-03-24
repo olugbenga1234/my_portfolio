@@ -11,7 +11,7 @@ html {
 body {
   font-family: Inconsolata, monospace;
   color: #141417;
-  background: #d0cfc5;
+  background: #232323;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,7 +54,7 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  padding: 5vw;
+  /* padding: 5vw; */
   pointer-events: none;
 }
 .codrops-header__title {
@@ -180,10 +180,7 @@ a:hover {
   display: block;
   font-size: 0.65em;
 }
-.demo-menu {
-  background: #4f4f54;
-  color: #828282;
-}
+
 .demo-menu a {
   color: #c5c149;
 }

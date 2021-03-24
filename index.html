@@ -19,7 +19,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/demo1.css" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/pieces.css" />
     <link rel="stylesheet" type="text/css" href="css/revealer.css" />
     <script>
       document.documentElement.className = "js";
@@ -44,10 +47,10 @@
             d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"
           />
         </symbol>
-        <symbol id="icon-menu" viewBox="0 0 17.6 9.9">
+        <symbol id="icon-menu" viewBox="0 0 24 24">
           <title>menu</title>
           <path
-            d="M17.6,1H0V0h17.6V1z M17.6,4.3h-12v1h12V4.3z M17.6,8.9h-6.9v1h6.9V8.9z"
+            d="M23.8,6H0.1V3h23.7C23.8,3,23.8,6,23.8,6z M23.8,10.5H0.1v3h23.7C23.8,13.5,23.8,10.5,23.8,10.5z M24,18H10v3h14V18z"
           />
         </symbol>
         <symbol id="icon-cross" viewBox="0 0 10.2 10.2">
@@ -73,15 +76,68 @@
         <ul class="menu__inner">
           <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
           <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Projects</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Projects</a>
+          </li>
           <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
         </ul>
       </nav>
     </section>
 
+    <section class="top">
+      <main>
+        <div
+          class="pieces"
+          style="background-image: url(img/normal.jpg)"
+          data-img-alt="url(img/alt.jpg)"
+          data-img-code="url(img/code.jpg)"
+        ></div>
+        <div class="overlay overlay--hidden"></div>
+        <div class="content">
+          <div class="content__inner">
+            <div class="content__top">
+              <h2 class="title">
+                <span
+                  class="title__inner mode mode--design"
+                  data-switch
+                  data-glitch
+                  >Annie Fox</span
+                >
+              </h2>
+            </div>
+
+            <div class="content__bottom">
+              <div class="switch mode mode--design">
+                <a class="switch__item switch__item--current">Designer</a>
+                <a class="switch__item"
+                  ><span class="mode mode--design" data-switch data-glitch
+                    >Coder</span
+                  ></a
+                >
+              </div>
+              <div class="link-wrap">
+                <a
+                  class="contact-link mode mode--design"
+                  data-switch
+                  data-glitch
+                  >Work with me</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- /content__inner-->
+        </div>
+        <!-- /content -->
+        <div class="loading"></div>
+      </main>
+    </section>
+
     <!-- javasripts -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/anime.min.js"></script>
+    <script src="js/charming.min.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/top.js"></script>
     <!-- menu script -->
     <script>
       (function () {

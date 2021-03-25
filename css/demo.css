@@ -73,7 +73,7 @@ a:hover {
   pointer-events: visible;
 }
 .content {
-  position: relative;
+  position: inherit;
   min-height: 300px;
   overflow-x: hidden;
 }
@@ -99,6 +99,7 @@ a:hover {
   outline: 0;
 }
 .btn--menu {
+  z-index: 1000;
   position: absolute;
   top: 3vw;
   right: 3vw;
@@ -118,7 +119,7 @@ a:hover {
   right: 0;
   height: 100%;
   width: 320px;
-  z-index: 100;
+  z-index: 100000;
 }
 .js .menu {
   pointer-events: none;

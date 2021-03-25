@@ -13,17 +13,17 @@
       content="template, page layout, concept, developer, designer, portfolio, effect, animation, css, javascript"
     />
     <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- CSS only -->
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-
     <link rel="stylesheet" type="text/css" href="css/demo1.css" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/pieces.css" />
     <link rel="stylesheet" type="text/css" href="css/revealer.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <script>
       document.documentElement.className = "js";
     </script>
@@ -101,43 +101,76 @@
                   class="title__inner mode mode--design"
                   data-switch
                   data-glitch
-                  >Annie Fox</span
+                  >Olugbenga</span
                 >
               </h2>
             </div>
 
+            <div
+              class="content-middle contact-link mode mode--design"
+              data-switch
+              data-glitch
+            ></div>
+
+            <div class="container text-top">
+              <div class="row">
+                <div class="col-md-6">
+                  <h1>Olugbenga</h1>
+                  <h2>Akeredolu</h2>
+                  <p>Kinux admin, web developer</p>
+                </div>
+              </div>
+            </div>
+
             <div class="content__bottom">
               <div class="switch mode mode--design">
-                <a class="switch__item switch__item--current">Designer</a>
+                <a class="switch__item switch__item--current"></a>
                 <a class="switch__item"
-                  ><span class="mode mode--design" data-switch data-glitch
-                    >Coder</span
-                  ></a
-                >
+                  ><span
+                    class="mode mode--design"
+                    data-switch
+                    data-glitch
+                  ></span
+                ></a>
               </div>
               <div class="link-wrap">
                 <a
                   class="contact-link mode mode--design"
                   data-switch
                   data-glitch
-                  >Work with me</a
-                >
+                ></a>
               </div>
             </div>
           </div>
           <!-- /content__inner-->
         </div>
         <!-- /content -->
-        <div class="loading"></div>
       </main>
     </section>
 
+    <!-- about me section -->
+    <section class="about">
+      <div class="content__section">
+        <a class="content__link"
+          >
+          <img class="content__img" src="img/set1/1.jpg" alt="img"
+        /></a>
+        <h2 class="content__text">About me</h2>
+      </div>
+    </section>
+     <!-- about me end -->
+
+    <div class="loading"></div>
     <!-- javasripts -->
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/anime.min.js"></script>
+    <script src="js/scrollMonitor.js"></script>
     <script src="js/charming.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/top.js"></script>
+    <script src="js/text-changing-onscroll.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- menu script -->
     <script>
       (function () {

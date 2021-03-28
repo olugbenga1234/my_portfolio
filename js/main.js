@@ -8,7 +8,7 @@
  * Copyright 2017, Codrops
  * http://www.codrops.com
  */
- ;(function(window) {
+;(function(window) {
 
 	// Helper vars and functions.
 	function extend( a, b ) {

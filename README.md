@@ -1,3 +1,3 @@
 # my portfolio
  my portfolio
- im olugbenga akeredolu and this my portfolio
+ i,m Olugbenga Akeredolu and this my portfolio

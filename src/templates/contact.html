@@ -1,0 +1,213 @@
+{% from "base.html" import render_css, render_js, render_first, render_menu %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    {{ render_css(render) }}
+  </head>
+
+  <body>
+    {{ render_first(render) }}
+
+    <!-- Single Page -->
+    <main class="single-page">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h2>.<span>contact me</span></h2>
+        <p class="contact-title-intro">
+            Have any Enquiries?
+            Feel free to contact me and I will get back to you as soon as possible.            
+        </p>
+      </div>
+      <!-- Page Header End -->
+      <div class="separator"></div>
+      <div class="contact-header-bg">
+        <!-- Contact Information -->
+        <div class="contact-info d-flex justify-content-between">
+          <div class="contact-info-box">
+            <div class="icon-box">
+              <span><i class="fas fa-phone-alt"></i></span>
+            </div>
+            <div class="text-box">
+              <a href="tel:{{my_number}}" class="pointer-small">{{my_number}}</a>
+            </div>
+          </div>
+          <div class="contact-info-box">
+            <div class="icon-box">
+              <span><i class="fab fa-whatsapp"></i></i></span>
+            </div>
+            <div class="text-box">
+              <a href="#" class="pointer-small">{{watsapp}}</a>
+            </div>
+          </div>
+          <div class="contact-info-box">
+            <div class="icon-box">
+              <span><i class="fas fa-paper-plane"></i></span>
+            </div>
+            <div class="text-box">
+              <a href="mailto:{{my_email}}" class="pointer-small">{{my_email}}</a>
+            </div>
+          </div>
+          <div class="contact-info-box">
+            <div class="icon-box">
+              <span><i class="fas fa-home"></i></span>
+            </div>
+            <div class="text-box">
+              <p>Greater London<br />United Kingdom</p>
+            </div>
+          </div>
+        </div>
+        <!-- Contact Information End -->
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6">
+          <!-- Contact Form -->
+          <div class="contact_form">
+            <form
+              class="contact__form"
+              method="POST"
+              action="{{ url_for('main.contact') }}"
+            >
+              <!-- Form Message -->
+              <div class="row">
+                <div class="col-12">
+                  {% with messages = get_flashed_messages(with_categories=true)
+                  %} {% if messages %} {% for category, message in messages %}
+                  {% if category == 'success' %}
+                  <div class="alert alert-success" role="alert">
+                    {{ message }}!
+                  </div>
+                  {% endif %} {% endfor %} {% endif %} {% if messages %} {% for
+                  category, message in messages %} {% if category == 'error' %}
+                  <div class="alert alert-danger" role="alert">
+                    Error: {{ message }}!
+                  </div>
+                  {% endif %} {% endfor %} {% endif %} {% endwith %}
+                </div>
+              </div>
+              <!-- Form Message End -->
+
+              <!-- Form Element -->
+              <div class="form_input_box">
+                <input
+                  class="pointer-input"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form_input_box">
+                <input
+                  class="pointer-input"
+                  name="email"
+                  type="email"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+              <div class="form_input_box">
+                <input
+                  class="pointer-input"
+                  name="subject"
+                  type="text"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form_input_box">
+                <input
+                  class="pointer-input"
+                  name="phone"
+                  type="number"
+                  placeholder="Phone"
+                />
+              </div>
+              <div class="form_input_box">
+                <textarea
+                  class="pointer-input"
+                  name="message"
+                  rows="3"
+                  placeholder="Your message"
+                  required
+                ></textarea>
+              </div>
+              <button class="form-submit-btn" name="submit" type="submit">
+                Send Message
+              </button>
+
+              <!-- Form Element End -->
+            </form>
+          </div>
+          <!-- Contact Form End -->
+        </div>
+        <div class="col-xl-6 col-lg-6">
+          <div id="map"></div>
+        </div>
+      </div>
+    </main>
+    <!-- Single page end -->
+
+    <!-- ======================================= -->
+<!-- MAIN MENU -->
+<!-- ======================================= -->
+<!-- Menu Container -->
+<nav class="menu-container overlay-bg">
+  <!-- Menu Close -->
+  <div class="menu-close pointer-large"></div>
+
+  <!-- Sub Menu Close -->
+  <div class="submenu-close-box">
+    <div class="submenu-close pointer-large">
+      <button type="button"><i class="fas fa-arrow-left"></i>BACK</button>
+    </div>
+  </div>
+  <!-- Sub Menu Close End -->
+
+  <!-- Main Menu -->
+  <ul class="main-menu overlay-bg">
+    <!-- Menu Box -->
+    <li class="nav-box mouseover-image-change ">
+      <a href="index.html" class="pointer-large nav-link">
+        <span class="nav-btn " data-text="home">.Home</span>
+      </a>
+
+    </li>
+    <!-- Menu Box End -->
+    <!-- Menu Box -->
+    <li class="nav-box mouseover-image-change">
+      <a href="about.html" class="pointer-large nav-link">
+        <span class="nav-btn" data-text="about">.About me</span>
+      </a>
+  
+    </li>
+    <!-- Menu Box End -->
+  
+
+    <li class="nav-box mouseover-image-change">
+      <a href="#" class="pointer-large nav-link">
+        <span class="nav-btn" data-text="resume">.My portfolio</span>
+      </a>
+    
+    </li>
+
+    <!-- Menu Box -->
+    <li class="nav-box mouseover-image-change active">
+      <a href="contact.html" class="pointer-large nav-link">
+        <span class="nav-btn active" data-text="contact">.Contact me</span>
+      </a>
+      
+    </li>
+    <!-- Menu Box End -->
+  </ul>
+  <!-- Main Menu End -->
+</nav>
+<!-- Menu Container End -->
+
+
+    <button id="back_to_top" class="btnEntrance pointer-href">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    {{ render_js(render) }}
+  </body>
+</html>

@@ -1,0 +1,163 @@
+{% from "base.html" import render_css, render_js, render_first, render_menu %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    {{ render_css(render) }}
+  </head>
+
+  <body>
+    {{ render_first(render) }}
+
+    <!-- Home Section -->
+    <main class="home-section">
+      <div class="backgroundShape-right"></div>
+      <div
+        class="home-container d-flex align-items-center justify-content-center"
+      >
+        <!-- Particles Animation -->
+        <div id="particles-js"></div>
+        <!-- Particles Animation End -->
+        <!-- Author Name, My Name, Home Page Title -->
+        <div class="home-title">
+          <h3>Hello World! I’m</h3>
+          <h1 class="theme-color">Olugbenga Akeredolu.</h1>
+          <h4></h4>
+          <h4 class="typewrite"
+            data-period="2000"
+            data-type='[ "Web Designer & Developer.", "Linux Administrator.", "Fullstack Developer.",  "Mobile Developer." ]'
+          >
+            <span class="wrap"></span>
+          </h4>
+          <div class="template-btn">
+              
+            <a href="contact.html" class="pointer-href">Hire me</a>
+            <a href="{{ url_for('.download_file') }}" class="pointer-href">Download CV</a>
+           
+          </div>
+        </div>
+        <!-- Author Name, My Name, Home Page Title End -->
+        <!-- Dribbble Slider -->
+        <!--div class="dribbble-btn pointer-href">
+          <button
+            data-toggle="tooltip"
+            data-placement="left"
+            title="Recent Dribbbles"
+          >
+            <i class="fas fa-basketball-ball"></i>
+          </button>
+        </div-->
+        <!--div class="dribbble-slider">
+          <div class="dribbble-close-btn pointer-href">
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="dribbble-slider-active owl-carousel">
+            <div class="slider-box d-flex align-items-center">
+              <div class="slider-text">
+                <h4 class="h4 theme-color">Web Design</h4>
+                <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit</p>
+                <a href="#" class="read-more-btn pointer-href"
+                  >Go to dribbble</a
+                >
+              </div>
+              <div class="slider-image">
+                <img src="img/slider/1.jpg" alt="slide image" />
+              </div>
+            </div>
+            <div class="slider-box d-flex align-items-center">
+              <div class="slider-text">
+                <h4 class="h4 theme-color">Web Develop</h4>
+                <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit</p>
+                <a href="#" class="read-more-btn pointer-href"
+                  >Go to dribbble</a
+                >
+              </div>
+              <div class="slider-image">
+                <img src="img/slider/2.jpg" alt="slide image" />
+              </div>
+            </div>
+            <div class="slider-box d-flex align-items-center">
+              <div class="slider-text">
+                <h4 class="h4 theme-color">Branding</h4>
+                <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit</p>
+                <a href="#" class="read-more-btn pointer-href"
+                  >Go to dribbble</a
+                >
+              </div>
+              <div class="slider-image">
+                <img src="img/slider/3.jpg" alt="slide image" />
+              </div>
+            </div>
+          </div>
+        </div-->
+        <!-- Dribbble Slider End -->
+      </div>
+    </main>
+    <!-- Home Section end -->
+
+    {{ render_menu(render) }}
+
+    <button id="back_to_top" class="btnEntrance pointer-href">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+        var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+    
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+    
+            if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+    
+            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+    
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+    
+            if (this.isDeleting) { delta /= 2; }
+    
+            if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+            }
+    
+            setTimeout(function() {
+            that.tick();
+            }, delta);
+        };
+    
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                  new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+    </script>
+
+    {{ render_js(render) }}
+  </body>
+</html>
